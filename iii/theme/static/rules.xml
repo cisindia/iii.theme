@@ -16,6 +16,20 @@
 
     <merge theme="/html/body" content="/html/body" attributes="class"/>
     <merge theme="/html/body" content="/html/body" attributes="dir"/>
+
+    <replace css:theme-children="#globalnav">
+        <xsl:for-each css:select="#portal-globalnav > li">
+            <li><xsl:attribute name="class"><xsl:if test="contains(@class, 'selected')">active</xsl:if></xsl:attribute>
+                <a><xsl:attribute name="href"><xsl:value-of select="a/@href"/></xsl:attribute><xsl:copy-of select="a/node()"/></a></li>
+        </xsl:for-each>
+    </replace>
+
+    <replace css:theme-children="#main" css:content-children="#portal-column-content"/>
     <append css:theme="body" css:content="#plone-analytics"/>
+    <replace css:theme="#main-search form">
+        <form><xsl:attribute name="action"><xsl:value-of select="//*[@id='portal-searchbox']/form/@action"/></xsl:attribute>
+            <input class="span4" name="SearchableText" type="text" placeholder="Search"/>
+        </form>
+    </replace>
 
 </rules>
