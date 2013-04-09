@@ -24,6 +24,8 @@
         </xsl:for-each>
     </replace>
 
+    <drop css:content="#portal-breadcrumbs" />
+
     <replace css:theme-children="#main" css:content-children="#portal-column-content"/>
     <append css:theme="body" css:content="#plone-analytics"/>
     <replace css:theme="#main-search form">
