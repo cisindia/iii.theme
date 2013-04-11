@@ -1741,13 +1741,13 @@ body.template-login_form #content,
 }
 
 #fieldset-openid-login input, #login-form input {
-    font-size: 150%;
+    font-size: 100%;
 }
 
 
 body.template-register #content input,
 body.template-new-user #content input {
-    font-size: 150%;
+    font-size: 100%;
     width: inherit;
 
 }
