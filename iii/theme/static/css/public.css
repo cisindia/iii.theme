@@ -2270,3 +2270,11 @@ a.historyComparePrevious span {
     display: none;
 }
 /* @end */
+
+#globalnav {
+    font-size:24px;
+}
+
+#globalnav > li > a {
+    padding:12px;
+}
