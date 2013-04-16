@@ -16,7 +16,10 @@
 
     <merge theme="/html/body" content="/html/body" attributes="class"/>
     <merge theme="/html/body" content="/html/body" attributes="dir"/>
-
+    <replace css:theme="#portal-logo">
+        <a><xsl:attribute name="href"><xsl:value-of  select="//*[@id='portal-logo']/@href"/></xsl:attribute>
+            The Internet Institute</a>
+    </replace>
     <replace css:theme-children="#globalnav">
         <xsl:for-each css:select="#portal-globalnav > li">
             <li><xsl:attribute name="class"><xsl:if test="contains(@class, 'selected')">active</xsl:if></xsl:attribute>
